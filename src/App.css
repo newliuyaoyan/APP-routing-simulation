@@ -1,33 +1,194 @@
-.App {
-  text-align: center;
+*{
+    padding: 0%;
+    margin: 0%;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+button:active{
+    opacity: 0.8;
+}
+.nav{
+   height: 50px;
+   background-color: cornflowerblue;
+   width: 100%;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   z-index: 1000;
+   display: flex;
+}
+.nav .back{
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    border: none;
+    border-right: solid rgba(0, 0, 0, 0.1) 1px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+.nav .page-title{
+    line-height: 50px;
+    color: white;
+    padding-left: 20px;
+}
+.bottom-bar{
+    height: 50px;
+    background-color: cornflowerblue;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: flex;
+}
+.bottom-bar .bottom-bar-button{
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-weight: 600;
+    flex: 1;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App-main-view{
+    width: 100%;
+    height: 100%;
+    padding: 50px 5px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #f2f2f2
+}
+.App-main-view .list-view{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
+}
+.App-main-view .list-view a{
+    color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list .item{
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    margin-bottom: 2px;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.list .item .item-img{
+  height: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.list .item .item-name{
+    color: #333333;
+    font-size: 0.7em;
+    font-weight: 500;
+line-height: 25px;
 }
+.list .item .item-price{
+    color: #f00;
+    font-size: 0.9em;
+    font-weight: 600;
+   line-height: 30px;
+}
+.list .item .item-wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.detail-view{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail-view .detail-img{
+    width: 100%;
+}
+.detail-view .detail-name{
+  width: 90%;
+  text-align: left;
+  margin: 20px 0px;
+  font-size: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.detail-view .detail-price{
+    width: 90%;
+    text-align: left;
+    font-size: 25px;
+    color: #f00;
+}
+.detail-view .bottom-bar{
+    height: 50px;
+    background-color: cornflowerblue;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+.detail-view .bottom-bar .bottom-button{
+color: white;
+width: 100px;
+line-height: 50px;
+}
+.detail-view .bottom-bar  #buynow{
+    background-color: red;
+}
+.shopping-view{
+    margin-top: 2px;
+    width: 100%;
+
+}
+.shopping-view .shoppingcar-item{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.shopping-view .shoppingcar-item .item-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.shopping-view .shoppingcar-item .item-img{
+  height: 90%;
+}
+.shopping-view .shoppingcar-item .item-name{
+  color: #333333;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 20px;
+}
+.shopping-view .shoppingcar-item .item-price{
+  color: #f00;
+  line-height: 35px;
 }
